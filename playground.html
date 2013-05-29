@@ -24,7 +24,7 @@
         });
 
         $("li").on("click", function(e) {
-          $(e.target).css("color", "red");
+          $(e.target).replaceWith('<li><input size="80" value="' + e.target.innerText + '"></li>');
         })
 
         $("a").on("click", function(e) {
