@@ -9,27 +9,37 @@
     </style>
   </head>
 
+    <script>
+      $(document).ready(function() {
+
+        $("#remove_item").on("click", function(ev) {
+          $(ev.target).remove();
+        })
+        $("#add_item").on("click", function() {
+          $("ul").append("<li>Hello</li>");
+        })
+
+        $("h1").on("click", function() {
+          $("ul").slideToggle();
+        });
+
+        $("li").on("click", function(e) {
+          $(e.target).css("color", "red");
+        })
+
+        $("a").on("click", function(e) {
+          alert("Nice try!");
+          e.preventDefault();
+        })
+      });
+
+    </script>
 
   <body>
 
     <h1>jQuery Challenges</h1>
 
-  <script>
-    // Show an alert box before the body of the page is shown.
-    // alert("Hello!");
-
-    var e = document.getElementsByTagName("h1")[0];
-    e.onclick = function() {
-      var ul = document.getElementsByTagName("ul")[0];
-      if (ul.style.display === "none") {
-        ul.style.display = "block";
-      } else {
-        ul.style.display = "none";
-      }
-
-    }
-
-  </script>
+    <h2>Try #3 and #4 until 4:05pm</h2>
 
     <ul>
       <li>Clicking the heading above should make this entire list appear and disappear.</li>
