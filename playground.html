@@ -9,14 +9,27 @@
     </style>
   </head>
 
-  <script>
-    // Show an alert box before the body of the page is shown.
-    // Then, try the challenges.
-  </script>
 
   <body>
 
     <h1>jQuery Challenges</h1>
+
+  <script>
+    // Show an alert box before the body of the page is shown.
+    // alert("Hello!");
+
+    var e = document.getElementsByTagName("h1")[0];
+    e.onclick = function() {
+      var ul = document.getElementsByTagName("ul")[0];
+      if (ul.style.display === "none") {
+        ul.style.display = "block";
+      } else {
+        ul.style.display = "none";
+      }
+
+    }
+
+  </script>
 
     <ul>
       <li>Clicking the heading above should make this entire list appear and disappear.</li>
